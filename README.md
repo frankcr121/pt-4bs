@@ -11,7 +11,7 @@ Desarrollada con **Angular 21** y **PrimeNG**.
     npm install
 
 3. **Iniciar el servidor de desarrollo:**
-    ng serve
+    ng serve -o
 
 4. **Credenciales de Acceso:**
     https://fakestoreapi.com/users
