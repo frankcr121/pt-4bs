@@ -14,8 +14,7 @@ Desarrollada con **Angular 21** y **PrimeNG**.
     ng serve
 
 4. **Credenciales de Acceso:**
-    Usuario: mor_2314
-    Contraseña: 83r5^_
+    https://fakestoreapi.com/users
 
 **Decisiones Técnicas**
     Angular Signals: Se implementó el manejo de estado utilizando Signals en lugar de Observables tradicionales para la gestión de datos en los componentes.
