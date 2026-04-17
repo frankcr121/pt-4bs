@@ -1,0 +1,148 @@
+.detail-container {
+    padding: 3rem;
+    min-height: 100vh;
+    background: #020617; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass-card-detail {
+    background: rgba(30, 41, 59, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2.5rem;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+}
+
+.image-section {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.info-section h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    line-height: 1.1;
+}
+
+.category-badge {
+    color: #60a5fa;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+}
+
+.rating-info {
+    display: flex;
+    align-items: center;
+    color: #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.count-text {
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
+.description {
+    color: #94a3b8;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.price-action-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price-tag {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-tag small {
+    color: #64748b;
+}
+
+.amount {
+    font-size: 2.2rem;
+    color: #4ade80; 
+    font-weight: 800;
+}
+
+.back-btn {
+    color: #94a3b8 !important;
+}
+
+@media (max-width: 768px) {
+    .product-grid { grid-template-columns: 1fr; }
+    .detail-container { padding: 1.5rem; }
+}
+
+.selection-area {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(15, 23, 42, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    gap: 2rem;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 200px; 
+}
+
+.input-field label {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+::ng-deep .custom-dropdown {
+    width: 100% !important;
+    background: rgba(15, 23, 42, 0.6) !important;
+    border: 1px solid #334155 !important;
+    border-radius: 8px !important;
+}
+
+::ng-deep .custom-dropdown .p-dropdown-label {
+    color: #f8fafc !important;
+    padding: 0.6rem !important;
+}
+
+::ng-deep .custom-dropdown .p-dropdown-trigger {
+    color: #60a5fa !important;
+}
+

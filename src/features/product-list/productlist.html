@@ -1,0 +1,58 @@
+<div class="list-container">
+  <div class="table-card">
+      <div class="table-header">
+          <div class="header-content">
+              <i class="pi pi-shopping-bag text-blue-500 text-3xl"></i>
+              <div>
+                  <h2>CATALOGO DE PRODUCTOS</h2>
+                  <p>Gestión de inventario</p>
+              </div>
+          </div>
+          
+          <div class="search-box">
+              <span class="p-input-icon-left">
+                  <i class="pi pi-search"></i>
+                  <input pInputText type="text" 
+                         (input)="dt.filterGlobal($any($event.target).value, 'contains')" 
+                         placeholder="Buscar producto..." />
+              </span>
+              <button pButton icon="pi pi-sign-out" label="Salir" class="p-button-danger p-button-text" (click)="logout()"></button>
+          </div>
+      </div>
+
+      <p-table #dt [value]="products()" [rows]="5" [paginator]="true" 
+               [globalFilterFields]="['title', 'category']" 
+               responsiveLayout="scroll" class="custom-table">
+          <ng-template pTemplate="header">
+              <tr>
+                  <th style="width: 80px">IMAGEN</th>
+                  <th pSortableColumn="title">PRODUCTO <p-sortIcon field="title"></p-sortIcon></th>
+                  <th pSortableColumn="category">CATEGORIA <p-sortIcon field="category"></p-sortIcon></th>
+                  <th pSortableColumn="price">PRECIO <p-sortIcon field="price"></p-sortIcon></th>
+                  <th style="width: 120px">ACCIONES</th>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-product>
+              <tr>
+                  <td>
+                      <img [src]="product.image" [alt]="product.title" class="product-img-thumb" #img (error)="img.src = 'https://placehold.co/400x400?text=No+Image'"/>
+                  </td>
+                  <td class="font-bold">{{product.title}}</td>
+                  <td>
+                      <span class="category-badge">{{product.category}}</span>
+                  </td>
+                  <td class="price-text">{{product.price | currency:'S/'}}</td>
+                  <td>
+                      <button pButton icon="pi pi-eye" class="p-button-rounded p-button-info p-button-text" 
+                              (click)="viewDetail(product.id)"></button>
+                  </td>
+              </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage">
+              <tr>
+                  <td colspan="5" class="text-center p-4">No se encontraron productos.</td>
+              </tr>
+          </ng-template>
+      </p-table>
+  </div>
+</div>

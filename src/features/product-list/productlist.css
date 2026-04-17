@@ -1,0 +1,106 @@
+.list-container {
+    padding: 2rem;
+    min-height: 100vh;
+    background: #020617;
+}
+
+.table-card {
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-content h2 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.header-content p {
+    color: #94a3b8;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.search-box {
+    display: flex;
+    gap: 1rem;
+}
+
+::ng-deep .p-datatable {
+    background: transparent !important;
+}
+
+::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    background: rgba(15, 23, 42, 0.8) !important;
+    color: #94a3b8 !important;
+    border: none !important;
+    padding: 1rem;
+}
+
+::ng-deep .p-datatable .p-datatable-tbody > tr {
+    background: transparent !important;
+    color: #e2e8f0 !important;
+    transition: background 0.2s;
+}
+
+::ng-deep .p-datatable .p-datatable-tbody > tr:hover {
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.product-img-thumb {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: white;
+    border-radius: 8px;
+    padding: 4px;
+}
+
+.category-badge {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.price-text {
+    color: #4ade80; 
+    font-weight: bold;
+}
+
+::ng-deep .p-paginator {
+    background: transparent !important;
+    border: none !important;
+    padding: 1rem 0;
+}
+
+::ng-deep .p-paginator .p-paginator-page, 
+::ng-deep .p-paginator .p-link {
+    color: #94a3b8 !important;
+}
+
+::ng-deep .p-paginator .p-highlight {
+    background: rgba(59, 130, 246, 0.2) !important;
+    color: #60a5fa !important;
+}

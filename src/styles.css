@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #0f172a; 
+    color: #f8fafc;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+.p-card {
+    background: #1e293b !important;
+    border: 1px solid #334155 !important;
+    color: #f8fafc !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+.p-button {
+    border-radius: 8px !important;
+    transition: all 0.2s ease;
+}
+
+.p-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+
+.p-datatable .p-datatable-header, 
+.p-datatable .p-datatable-thead > tr > th {
+    background: #1e293b !important;
+    color: #94a3b8 !important;
+    border-bottom: 1px solid #334155 !important;
+}
+
+.p-datatable .p-datatable-tbody > tr {
+    background: #0f172a !important;
+    color: #e2e8f0 !important;
+}
+
+.p-datatable .p-datatable-tbody > tr:hover {
+    background: #1e293b !important;
+}
