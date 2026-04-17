@@ -31,7 +31,7 @@ export class LoginComponent {
           this.router.navigate(['/productos']);
         },
         error: (err) => {
-          this.errorMessage = 'Credenciales incorrectas. Intenta con mor_2314 / 83r5^_';
+          this.errorMessage = 'Credenciales incorrectas. Intenta con jimmie_k / klein*#%*';
         }
       });
     }

@@ -1,59 +1,41 @@
-# Pt4bs
+# Prueba Técnica: 4 Byte Solutions
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Desarrollada con **Angular 21** y **PrimeNG**. 
 
-## Development server
+1. **Clonar el repositorio:**
+   ```bash
+   git clone [https://github.com/frankcr121/pt-4bs.git]
+   cd pt4bs
 
-To start a local development server, run:
+2. **Instalar dependencias:**
+    npm install
 
-```bash
-ng serve
-```
+3. **Iniciar el servidor de desarrollo:**
+    ng serve
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. **Credenciales de Acceso:**
+    Usuario: mor_2314
+    Contraseña: 83r5^_
 
-## Code scaffolding
+**Decisiones Técnicas**
+    Angular Signals: Se implementó el manejo de estado utilizando Signals en lugar de Observables tradicionales para la gestión de datos en los componentes.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+    Seguridad con Interceptor: Se desarrolló un AuthInterceptor para adjuntar automáticamente el token JWT en las cabeceras de cada petición HTTP.
 
-```bash
-ng generate component component-name
-```
+    Protección de Rutas con Guards: Se utilizó CanActivate para prevenir el acceso a las vistas de productos a usuarios no autenticados.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+    Diseño Moderno: Se personalizó PrimeNG mediante CSS y PrimeFlex para crear una interfaz "Dark Mode" con efectos de desenfoque de fondo, mejorando la estética visual solicitada.
 
-```bash
-ng generate --help
-```
+    Arquitectura Limpia: Organización por carpetas core (servicios, modelos, guards) y features (componentes) para facilitar la escalabilidad.
 
-## Building
+**Mejoras Futuras**
 
-To build the project run:
+    Manejo de Errores Global: Implementar un ErrorHandler global para capturar errores de tiempo de ejecución y mostrarlos mediante ToastMessages de PrimeNG.
 
-```bash
-ng build
-```
+    Estado de Compra: Implementar un carrito de compras funcional utilizando localStorage sincronizado con un Signal global.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+    Tests Unitarios: Incrementar la cobertura de pruebas.
 
-## Running unit tests
+    Internacionalización: Implementar soporte para múltiples idiomas (español/inglés).
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+    Optimización de Imágenes: Implementar lazy loading nativo y formatos de imagen de última generación (WebP) para mejorar los tiempos de carga del catálogo.
